@@ -1,12 +1,10 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f8f9fa;
 }
 
 section {
-    margin: 6% 0;
+    margin: 4rem 0;
 }
 
 section h2 {
@@ -14,12 +12,8 @@ section h2 {
     color: #333;
 }
 
-ul {
-    margin-left: 0.5rem;
-}
-
 li {
-    margin-bottom: 1rem;
+    margin: 0 0 2rem 0.5rem;
 }
 
 li span {
@@ -33,33 +27,17 @@ li span {
     margin: auto;
     background-color: #fff;
     border: 0.1rem solid #ccc;
-    border-radius: 1rem;
+    border-radius: 2rem;
     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-}
-
-.form .form-control {
-    position: relative;
-    box-sizing: border-box;
-    height: auto;
-    padding: 0.5rem;
-}
-
-.form .form-control:focus {
-    z-index: 2;
 }
 
 .checkbox {
     margin-top: 1rem;
 }
 
-#faq ul li {
-    margin-bottom: 5%;
-}
-
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 2rem;
     padding: 2rem 0;
     background-color: #343a40;
 }

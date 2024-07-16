@@ -17,4 +17,4 @@ This repository contains HTML files for various pages of a website related to da
 
 ## Styling
 - The pages use Bootstrap 4 for responsive design.
-- Custom styles are defined in the `styles.css` file included in each page's `<head>` section.
+- Custom styles are defined in the `css/styles.css` file included in each page's `<head>` section.
