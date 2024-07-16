@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Leveraging Machine Learning to Assess Market-Level Food Safety and Zoonotic Disease
+            Risks in China</h1>
+
+        <section id="project-description">
+            <h2>Project Description & Overview</h2>
+            <p>
+                In recent years, China has faced significant challenges with zoonotic diseases originating from its
+                wholesale and wet markets, highlighting the critical need to balance food safety regulations with market
+                sustainability. This project aims to develop a data-driven approach using machine learning to evaluate
+                and mitigate these risks effectively.
+            </p>
+        </section>
+
+        <section id="objectives">
+            <h2>Objectives</h2>
+            <p>
+                The primary objective of this project is to assess the correlation between food safety risks
+                (specifically, food adulteration) in wholesale markets (WSMs) and wet markets (WMs) across China and the
+                incidence of zoonotic diseases. By analyzing extensive datasets derived from regulatory food safety
+                tests and zoonotic disease outbreaks, the project seeks to:
+            </p>
+            <ul>
+                <li>
+                    <span>Develop Market-Level Risk Scores</span>: Utilize machine learning algorithms to create food
+                    adulteration risk scores for individual markets based on historical regulatory data from China's
+                    Administration for Market Regulation (AMR).
+                </li>
+                <li><span>Correlate Risk Scores with Zoonotic Diseases</span>: Investigate and establish statistical
+                    correlations between these market-level risk scores and the occurrence of zoonotic disease outbreaks
+                    using epidemiological data.</li>
+                <li><span>Identify High-Risk Markets</span>: Identify and prioritize markets with elevated food
+                    adulteration risks, potentially linked to zoonotic outbreaks, to guide targeted regulatory
+                    interventions.</li>
+            </ul>
+        </section>
+
+        <section id="methodology">
+            <h2>Methodology</h2>
+            <p>
+                The project employs a comprehensive methodology integrating machine learning techniques and
+                epidemiological analyses:
+            </p>
+            <ul>
+                <li><span>Data Collection and Preparation</span>: Aggregate and preprocess a vast dataset of over 4
+                    million food safety test records conducted between 2014 and 2020 by AMRs at various levels (state,
+                    provincial, prefecture).</li>
+                <li><span>Machine Learning for Market Identification</span>: Develop novel clustering algorithms
+                    tailored for Chinese text to associate food safety test records with specific markets, overcoming
+                    challenges in inconsistent market naming conventions.</li>
+                <li><span>Risk Score Calculation</span>: Compute market-level food adulteration risk scores based on
+                    failure rates from AMR tests, focusing on markets handling high volumes of animal products.</li>
+                <li><span>Statistical Analysis</span>: Apply regression models to assess the relationship between these
+                    risk scores and zoonotic disease outbreaks, controlling for regional factors like livestock
+                    production
+                    and market density.</li>
+            </ul>
+        </section>
+
+        <section id="amr-pipeline">
+            <h2>AMR Pipeline Process</h2>
+            <img src="https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41598-022-25817-8/MediaObjects/41598_2022_25817_Fig1_HTML.png?as=webp"
+                alt="AMR Pipeline Process">
+            <p>This image illustrates the flow chart diagram of the AMR Pipeline process:</p>
+            <ul>
+                <li><span>Step I</span>: AMR Food Adulteration Database Integration</li>
+                <li><span>Step II</span>: Identify AMR Database Test Records of Animal Products at Markets</li>
+                <li><span>Step III</span>: Unsupervised Clustering to Connect Records to Specific Markets</li>
+                <li><span>Step IV</span>: Market Risk Scores (Failure Rates)</li>
+                <li><span>Step V</span>: Province Risk Scores (Number of AMR Tests at Markets in the Top 20% of Risk
+                    Scores)</li>
+                <li><span>Step VI</span>: Province Analysis (Association of Province Risk Scores with Zoonotic Flu
+                    Isolates in
+                    Humans)</li>
+            </ul>
+        </section>
+
+
+        <section id="results-impact">
+            <h2>Results and Impact</h2>
+            <p>
+                The project's outcomes aim to provide actionable insights and tools for policymakers, regulators, and
+                public health officials:
+            </p>
+            <ul>
+                <li><span>Decision Support Tool</span>: Develop an operational tool for visualizing market risk scores
+                    and associated food safety test results, aiding regulators in prioritizing inspections and
+                    interventions.</li>
+                <li><span>Policy Recommendations</span>: Inform evidence-based policies for targeted regulatory
+                    interventions that enhance food safety and mitigate zoonotic disease risks while preserving market
+                    operations
+                    vital to China's food supply chain.</li>
+                <li><span>Contribution to Public Health</span>: Advance understanding of the systemic factors
+                    contributing to zoonotic disease transmission in market settings, facilitating proactive public
+                    health measures.
+                </li>
+            </ul>
+        </section>
+
+        <section id="dataset-sample">
+            <h2>Sample Subset Table of AMR Dataset</h2>
+            <p>File: <code>Zhejiang_Zhejiang_msb_20220730/3.食品抽检合格-20201111.xls</code>.</p>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>抽样编号</th>
+                        <th>序号</th>
+                        <th>标称生产企业名称</th>
+                        <th>标称生产企业地址</th>
+                        <th>被抽样单位名称</th>
+                        <th>被抽样单位所在省份</th>
+                        <th>食品名称</th>
+                        <th>规格型号</th>
+                        <th>生产日期/批号</th>
+                        <th>分类</th>
+                        <th>公告号</th>
+                        <th>公告日期</th>
+                        <th>任务来源/项目名称</th>
+                        <th>备注</th>
+                        <th>公告网址链接</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GC20330000300530998</td>
+                        <td>1</td>
+                        <td>金华市蜂御医养蜂专业合作社蜂产品加工厂</td>
+                        <td>浙江省金华市胜利北街气象巷5号</td>
+                        <td>金华市蜂御医养蜂专业合作社</td>
+                        <td>浙江</td>
+                        <td>洋槐蜂蜜</td>
+                        <td>500克/瓶</td>
+                        <td>6/10/2020</td>
+                        <td>蜂产品</td>
+                        <td>浙江省食品2020年第45期</td>
+                        <td>2020.11.11</td>
+                        <td>浙江/(总局国抽)</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>GC20330000300530999</td>
+                        <td>2</td>
+                        <td>嵊州市香富制酱调味品厂</td>
+                        <td>嵊州市经济开发区(浦口街道)原农机厂</td>
+                        <td>嵊州市香富制酱调味品厂</td>
+                        <td>浙江</td>
+                        <td>母油王液态复合调味料</td>
+                        <td>散装称重</td>
+                        <td>6/2/2020</td>
+                        <td>调味品</td>
+                        <td>浙江省食品2020年第45期</td>
+                        <td>2020.11.11</td>
+                        <td>浙江/(总局国抽)</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>GC20330000300531000</td>
+                        <td>3</td>
+                        <td>金微克食品配料（杭州）有限公司</td>
+                        <td>杭州市萧山区经济开发区红泰六路489号16幢</td>
+                        <td>金微克食品配料（杭州）有限公司</td>
+                        <td>浙江</td>
+                        <td>复配防腐剂5号</td>
+                        <td>1kg/袋</td>
+                        <td>7/27/2020</td>
+                        <td>食品添加剂</td>
+                        <td>浙江省食品2020年第45期</td>
+                        <td>2020.11.11</td>
+                        <td>浙江/(总局国抽)</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>GC20330000005131798</td>
+                        <td>4</td>
+                        <td>象山德丰食品有限公司</td>
+                        <td>浙江省宁波市象山县大徐镇城东工业园万隆路615号</td>
+                        <td>象山德丰食品有限公司</td>
+                        <td>浙江</td>
+                        <td>千张</td>
+                        <td>/</td>
+                        <td>8/14/2020</td>
+                        <td>豆制品</td>
+                        <td>浙江省食品2020年第45期</td>
+                        <td>2020.11.11</td>
+                        <td>浙江/(总局国抽)</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>GC20330000300531001</td>
+                        <td>5</td>
+                        <td>绍兴市四方食品有限公司</td>
+                        <td>绍兴市诸暨阮市镇董公村</td>
+                        <td>绍兴市四方食品有限公司</td>
+                        <td>浙江</td>
+                        <td>精制老抽王调味精品</td>
+                        <td>800ml/壶</td>
+                        <td>8/6/2020</td>
+                        <td>调味品</td>
+                        <td>浙江省食品2020年第45期</td>
+                        <td>2020.11.11</td>
+                        <td>浙江/(总局国抽)</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="dataset-sample-english">
+            <h2>Sample Subset Table of AMR Dataset (English Translations)</h2>
+            <p>File: <code>Zhejiang_Zhejiang_msb_20220730/3.Food sampling qualified-20201111.xls</code>.</p>
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Sampling Number</th>
+                        <th>Serial Number</th>
+                        <th>Nominal Manufacturer Name</th>
+                        <th>Nominal Manufacturer Address</th>
+                        <th>Sampled Unit Name</th>
+                        <th>Sampled Unit Province</th>
+                        <th>Food Name</th>
+                        <th>Specification Model</th>
+                        <th>Production Date/Batch Number</th>
+                        <th>Classification</th>
+                        <th>Announcement Number</th>
+                        <th>Announcement Date</th>
+                        <th>Task Source/Project Name</th>
+                        <th>Remarks</th>
+                        <th>Announcement Website Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GC20330000300530998</td>
+                        <td>1</td>
+                        <td>Jinhua Fengyuyi Beekeeping Professional Cooperative Bee Products Processing Factory</td>
+                        <td>No. 5, Qixiang Lane, Shengli North Street, Jinhua City, Zhejiang Province</td>
+                        <td>Jinhua Fengyuyi Beekeeping Professional Cooperative</td>
+                        <td>Zhejiang</td>
+                        <td>Acacia Honey</td>
+                        <td>500g/bottle</td>
+                        <td>6/10/2020</td>
+                        <td>Bee Products</td>
+                        <td>Zhejiang Provincial Food 2020 No. 45</td>
+                        <td>2020.11.11</td>
+                        <td>Zhejiang/(General Administration of National Sampling)</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>GC20330000300530999</td>
+                        <td>2</td>
+                        <td>Shengzhou Xiangfu Sauce and Seasoning Factory</td>
+                        <td>Shengzhou Economic Development Zone (Pukou Street) Former Agricultural Machinery Factory
+                        </td>
+                        <td>Shengzhou Xiangfu Sauce and Seasoning Factory</td>
+                        <td>Zhejiang</td>
+                        <td>Mother Oil King Liquid Compound Seasoning</td>
+                        <td>Bulk Weighing</td>
+                        <td>6/2/2020</td>
+                        <td>Condiment</td>
+                        <td>Zhejiang Provincial Food 2020 No. 45</td>
+                        <td>2020.11.11</td>
+                        <td>Zhejiang/(General Administration of State Administration of Food)</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>GC20330000300531000</td>
+                        <td>3</td>
+                        <td>Jinweike Food Ingredients (Hangzhou) Co., Ltd.</td>
+                        <td>Building 16, No. 489, Hongtai 6th Road, Economic Development Zone, Xiaoshan District,
+                            Hangzhou</td>
+                        <td>Jinweike Food Ingredients (Hangzhou) Co., Ltd.</td>
+                        <td>Zhejiang</td>
+                        <td>Compound Preservative No. 5</td>
+                        <td>1kg/bag</td>
+                        <td>7/27/2020</td>
+                        <td>Food Additives</td>
+                        <td>Zhejiang Provincial Food 2020 No. 45</td>
+                        <td>2020.11.11</td>
+                        <td>Zhejiang/(General Administration of State Administration of Food)</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>GC20330000005131798</td>
+                        <td>4</td>
+                        <td>Xiangshan Defeng Food Co., Ltd.</td>
+                        <td>No. 615, Wanlong Road, Chengdong Industrial Park, Daxu Town, Xiangshan County, Ningbo City,
+                            Zhejiang Province</td>
+                        <td>Xiangshan Defeng Food Co., Ltd.</td>
+                        <td>Zhejiang</td>
+                        <td>Qianzhang</td>
+                        <td>/</td>
+                        <td>8/14/2020</td>
+                        <td>Soy Products</td>
+                        <td>Zhejiang Provincial Food 2020 No. 45</td>
+                        <td>2020.11.11</td>
+                        <td>Zhejiang/(General Administration of State Administration of Soybean)</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>GC20330000300531001</td>
+                        <td>5</td>
+                        <td>Shaoxing Sifang Food Co., Ltd.</td>
+                        <td>Donggong Village, Ruanshi Town, Zhuji City, Shaoxing</td>
+                        <td>Shaoxing Sifang Food Co., Ltd.</td>
+                        <td>Zhejiang</td>
+                        <td>Refined Dark Soybean King Seasoning Boutique</td>
+                        <td>800ml/pot</td>
+                        <td>8/6/2020</td>
+                        <td>Condiments</td>
+                        <td>Zhejiang Provincial Food 2020 No. 45</td>
+                        <td>2020.11.11</td>
+                        <td>Zhejiang/(General Administration of State Administration of Soybean)</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="faq-link" class="mt-5">
+            <h2 class="text-center mb-4">FAQ</h2>
+            <p class="text-center">
+                For frequently asked questions, visit our FAQ page:
+            </p>
+            <div class="text-center">
+                <a href="faq.html" class="btn btn-info">Visit FAQ Page</a>
+            </div>
+        </section>
+
+        <section id="signup-section" class="text-center mt-4 mb-4">
+            <h2>Sign Up to Access Data and Visualizations</h2>
+            <p>Stay informed and explore detailed data insights and visualizations by signing up for
+                access.</p>
+            <a href="signup.html" class="btn btn-primary btn-lg">Sign Up</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <p>
+                        <a href="index.html">&copy; 2024 Your Website Name. All rights reserved.</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

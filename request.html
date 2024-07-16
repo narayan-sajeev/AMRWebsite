@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Request Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Dataset Request Form</h1>
+        <form action="thanks.html" method="post" class="form">
+            <div class="form-group">
+                <label for="researcherName">Full Name</label>
+                <input type="text" id="researcherName" class="form-control" name="researcherName" autofocus
+                    placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" name="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="institution">Institution/Organization</label>
+                <input type="text" id="institution" class="form-control" name="institution"
+                    placeholder="Your Institution">
+            </div>
+            <div class="form-group">
+                <label for="projectTitle">Project Title</label>
+                <input type="text" id="projectTitle" class="form-control" name="projectTitle"
+                    placeholder="Title of Your Project">
+            </div>
+            <div class="form-group">
+                <label for="requestReason">Reason for Requesting Dataset</label>
+                <textarea id="requestReason" class="form-control" name="requestReason" rows="4"
+                    placeholder="Please describe why you need the dataset"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
+        </form>
+    </div>
+
+    <footer>
+        <p class="text-center mt-4">
+            <a href="index.html">&copy; 2024 Your Website Name. All rights reserved.</a>
+        </p>
+    </footer>
+</body>
+
+</html>
