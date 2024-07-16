@@ -38,6 +38,7 @@ li span {
 /* Footer */
 footer {
     text-align: center;
+    margin-top: 7rem;
     padding: 2rem 0;
     background-color: #343a40;
 }
